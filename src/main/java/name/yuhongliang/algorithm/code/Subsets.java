@@ -11,7 +11,8 @@ public class Subsets {
 	public static void main(String[] args) {
 		Subsets subsets = new Subsets();
 		int[] nums = {1,2,3};
-		ArrayList<ArrayList<Integer>> result = subsets.uiqueSubsets(nums);
+//		ArrayList<ArrayList<Integer>> result = subsets.uiqueSubsets(nums);
+		ArrayList<ArrayList<Integer>> result = subsets.subsets(nums);
 		for(ArrayList<Integer> list : result) {
 			if (list.isEmpty()) {
 				System.out.println("empty set");
@@ -25,8 +26,8 @@ public class Subsets {
 	public ArrayList<ArrayList<Integer>> subsets(int[] nums) {
 		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
 		ArrayList<Integer> list = new ArrayList<>();
-		//subsetsHelper(result,list,nums,0);
-		bitSubsetHelper(result,list,nums);
+		subsetsHelper(result,list,nums,0);
+//		bitSubsetHelper(result,list,nums);
 		return result;
 	}
 
