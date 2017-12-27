@@ -16,7 +16,7 @@ public class JedisCommon {
 	}
 
 	public static void main(String[] args) {
-		Jedis jedis = getJedis();
+		/*Jedis jedis = getJedis();
 		jedis.select(2);
 		Map<String, String> map = jedis.hgetAll("model_attrs");
 		if (null != map && !map.isEmpty()) {
@@ -57,6 +57,20 @@ public class JedisCommon {
 				}
 				System.out.println("}");
 			}
+		}*/
+		
+		List<Integer> list = new ArrayList<>();
+		list.add(1);
+		list.add(2);
+		list.add(3);
+		list.add(4);
+		list.add(5);
+		List<Integer> subList = list.subList(0, 3);
+		for(Integer i : list) {
+			System.out.println("original list : " + i);
+		}
+		for (Integer integer : subList) {
+			System.out.println("sub LIst : " + integer);
 		}
 		
 	}
