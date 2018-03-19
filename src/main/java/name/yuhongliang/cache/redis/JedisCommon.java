@@ -11,7 +11,7 @@ import redis.clients.jedis.Jedis;
 public class JedisCommon {
 	
 	public static Jedis getJedis() {
-		Jedis jedis = new Jedis("172.16.2.207",6379);
+		Jedis jedis = new Jedis("192.168.32.206",6379);
 		return jedis;
 	}
 
@@ -58,6 +58,11 @@ public class JedisCommon {
 				System.out.println("}");
 			}
 		}*/
+		
+		Jedis jedis = getJedis();
+		jedis.select(1);
+		String json = jedis.get("200-6591");
+		System.out.println("json is :|" + json + "|");
 		
 		List<Integer> list = new ArrayList<>();
 		list.add(1);
