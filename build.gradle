@@ -21,6 +21,7 @@ dependencies {
     compile group: 'com.twelvemonkeys.imageio', name: 'imageio-jpeg', version: '3.3'
     compile (group: 'batik', name: 'batik-transcoder', version: '1.6-1'){ exclude group: 'fop' }
     compile group: 'redis.clients', name: 'jedis', version: '2.9.0'
+    compile group: 'org.apache.kafka',name:'kafka-clients',version:'2.2.0'
 
 
 }

@@ -10,6 +10,8 @@ public class StringTest {
 	public void testStringEncode() {
 		String str1 = "型号";
 		System.out.println(Base64.getEncoder().encode(str1.getBytes()));
+
+		System.out.println("12345678910".hashCode());
 	}
 	
 	public static String convertStr2HexStr(String input) {
